@@ -1,0 +1,28 @@
+body{
+    background-color:#ffde06;  
+  }
+  header{
+      background-color: #666663;
+  padding: 22px;
+  }
+  nav{
+      background-color: #8f1f1f;
+      padding: 24px;
+  }
+  section{
+      background-color: aliceblue;
+  }
+  article{
+      background-color: #ffff0e;
+  
+  }
+  article{
+      background-color: #ffff0e;
+  }
+  aside{
+  background-color: #8f1f1f;
+  width:43px;
+  }
+  footer{
+      background-color:#666663 ;
+  }

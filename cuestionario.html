@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Cuestionario</title>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: #c72424;">
+            <div class="container">
+             <a class="navbar-navbrand" href="apimovies.html">Inicio</a>
+             <ul class="nav navbar-nav">
+              <li>
+                <a href="menu.html">CALCULADORA</a>
+              </li>
+              <li>
+                <a href="pedido.html">Pedido</a>
+              </li>
+              <li>
+                <a href="contacto.html">Contacto</a>
+              </li>
+              <li><a href="movies01.html"></a>
+            </li>
+              <li class="active">
+                <a href="cuestionario.html">Cuestionario</a>
+              </li>
+             </ul>
+            </div>
+        </nav>
+        </div>
+        <div class="container">
+            <div class="quiz-container" id="quiz">
+                <div class="quiz-header">
+                    <div class="image-container">
+         <img src="imagen.jpg" alt="imagen" id="question-image" style="width: 250px; height: auto;">
+                     </div>
+              <h2 id="question">Question text</h2>
+              <ul>
+                <li>
+                    <input type="radio" name="answer" id="a">
+                    <label for="a_text">Question</label>
+                </li>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a">
+                        <label for="b_text">Question</label>
+                    </li>
+                    <ul>
+                        <li>
+                            <input type="radio" name="answer" id="a">
+                            <label for="c_text">Question</label>
+                        </li>
+                        <ul>
+                            <li>
+                                <input type="radio" name="answer" id="a">
+                                <label for="d_text">Question</label>
+                            </li>
+                    </ul>
+</div>
+<button id="submit">siguiente</button>
+            </div>
+        </div>
+        <script>
+            const quizData = [
+            {
+                question:"Quien gana en una pelea de los siguientes personajes"
+                Image:"quiz1.jpg",
+                a:"Superman",
+                b:"goku",
+                c:"batman",
+                d:"Chuck norris",
+                correct:"d"
+            },
+            {
+                question:"Otra pregunta"
+                Image:"quiz1.jpg",
+                a:"Superman",
+                b:"goku",
+                c:"batman",
+                d:"Chuck norris",
+                correct:"b"
+            },
+            {
+                question:"otra pregunta"
+                Image:"quiz1.jpg",
+                a:"Superman",
+                b:"goku",
+                c:"batman",
+                d:"Chuck norris",
+                correct:"a"
+            },
+            ];
+            const quiz = document.getElementById('quiz');
+            const answer Els= document.querySelectorAll('answer');
+            const questionEl = document.getElementById('question');
+            const submitBtn = document.getElementById('submit');
+            //
+            const a_text =document.getElemntById('a_text');
+            const b_text =document.getElemntById('a_text');
+            const c_text =document.getElemntById('a_text');
+            const d_text =document.getElemntById('a_text');
+            
+            let currentQuiz = 0; //
+let score = 0;//
+loadQuiz(); //
+function loadQuiz(){
+    deselectAnswer();
+    const currentQuizData = quizData(currentQuiz);
+    questionEl.innerText = currentQuizData.question;//
+    a_text.innerText = currentQuizData.a;//
+    a_text.innerText = currentQuizData.b;//
+    a_text.innerText = currentQuizData.c;//
+    a_text.innerText = currentQuizData.d;//
+    const questionImage = document.getElementById('question-image');
+    questionImage.src = currentQuizData.image;
+}
+function deselectAnswer(){
+answerEls.forEach(answerEl =>answerEl.checked = false);//   
+}
+function getSelected(){
+    let answer;
+    answerEls.forEach(answerEl => { if(answerEl.checked){
+        answer=answerEl.id;//
+    }});
+    return answer;
+}
+submitBtn.addEventListener('clic', () =>{
+    const answer = getSelected();//
+    if(answer){
+    if(answer === quizData[currentQuiz].correct){
+        score++;//
+    }
+    currentQuiz++ //
+    if(currentQuiz <quizData.length){
+        loadQuiz();
+    } else {
+        quiz.innerHTML = `
+            <h2> Contestaste ${score}/${quizData.length} de preguntas correctamente</h2>
+        <button onclick = "location.reload()">volver</button>
+        `
+}
+}
+}
+)
+        </script>
+        
+        <footer>
+
+        </footer>
+
+</body>
+
+</html>
