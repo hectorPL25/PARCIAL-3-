@@ -21,7 +21,7 @@
 <body>
       <div style="margin: 24px;">
 
-        <nav class="navbar navbar-light" style="background-color: #c72424;">
+        <nav class="navbar navbar-light" style="background-color: #2e19cf;">
 
             <div class="container">
               <ul class="nav navbar-nav">
@@ -42,7 +42,7 @@
                         <a href="calculadorafisica.html">caculadora Fisica</a>
                     </li>
                     <li>
-<a href="apimovies.html">movies</a>
+<a href="paginatomas.html">movies</a>
                     </li>
                     <li class="active">
                       <a href="cuestionario.html">cuestionario</a>
@@ -84,6 +84,8 @@
     <button id="submit">Siguiente</button>
   </div>
 </div>
+
+
 <style>
     body{
         align-items:center ;
@@ -96,7 +98,7 @@
         background-image:linear-gradient(315deg ,rgb(0, 251, 247) 0%,rgb(0, 251, 121) 100% ) ;
         border-radius: 10px;
         box-shadow: 0 0 20px 2px rgb(0, 30, 122);
-        width: 350px;
+        width: 300px;
         overflow: hidden;
     }
     .quiz-header{
@@ -107,11 +109,38 @@
         text-align: center;
         margin: 10px;
     }
+    ul{
+        list-style: none;
+    }
+    ul li{
+        font-size: 15px;
+        margin: 10px 0;
+    }
+    ul li label {
+        cursor: pointer;
+    }
+    button{
+      background-color:#615d92 ;
+      color: azure;
+      border: none;
+      display:block ;
+      width: 100%;
+      cursor: pointer;
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    button:hover{
+      background-color: #3223a2;
+    }
+    button:focus{
+      outline: none;
+      background-color: rgb(92, 7, 178);
+    }
 </style>
 <script>
   const quizData = [
     {
-      queztion: "quien gana en una pelea de los siguientes personajes?",
+      question: "quien gana en una pelea de los siguientes personajes?",
       image:"quiz1.jpg",
       a: "Superman",
       b:"goku",
@@ -186,7 +215,7 @@ submitBtn.addEventListener('clic',() =>{
  <style>
                footer{
 
-                background-color: rgb(6, 107, 52);
+                background-color: rgb(0, 225, 255);
 
                 padding: 40px;
             }
