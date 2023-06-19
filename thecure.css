@@ -1,6 +1,29 @@
+body{
+  background-color:rgb(226, 0, 247);
+}
+header{
+  background-color: yellowgreen;
+  padding: 25px;
+}
+nav{
+  background-color:purple;
+  padding: 10px;
+}
+selection{
+  background-color:white;
+}
+article{
+  background-color:blue;
+}
+aside{
+  background-color:#21FA90;
+  width: 30%;
+  float: right;
+}
 
             footer{
-                background-color: rgb(6, 107, 52);
+
+                background-color: khaki;
                 padding: 40px;
             }
             .container{
@@ -42,3 +65,14 @@
             .contact-links a:hover{
                 transform: translateY(-15px);
             }
+            
+table{
+  background-color: whitesmoke;
+  width: 700px;
+  position: center;
+}
+cc{
+  font-family:'Verdana' Geneva, Tahoma,sans-serif;
+  font-weight: bold;
+  color: grey;
+}
